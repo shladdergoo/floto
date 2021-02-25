@@ -8,7 +8,7 @@ provider "aws" {
 }
 
 module "vpc-app" {
-  source              = "./module/vpc"
+  source              = "./modules/vpc"
   region              = var.region
   label               = "app"
   vpc_name            = "${var.env}-app-vpc"
