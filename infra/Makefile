@@ -22,3 +22,11 @@ apply: init
 	@echo "* PROFILE		$(AWS_PROFILE)"
 	@echo "*******************************************"
 	terraform apply --var-file=./environment/$(ENV)/variables.tf
+
+destroy: init
+	@echo "*******************************************"
+	@echo "* ACTION:		DESTROY"
+	@echo "* ENV:			$(ENV)"
+	@echo "* PROFILE		$(AWS_PROFILE)"
+	@echo "*******************************************"
+	terraform destroy --var-file=./environment/$(ENV)/variables.tf
